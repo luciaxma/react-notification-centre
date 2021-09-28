@@ -1,0 +1,126 @@
+.notifications-icon {
+  cursor: pointer;
+}
+
+.notifications-count {
+  height: 16px;
+  width: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  top: 10px;
+  left: 26px;
+  font-size: 9px;
+  border-radius: 50%;
+  background-color: red;
+  font-weight: 400;
+  color: white;
+}
+
+.notifications-wrapper {
+  width: 430px;
+  height: 500px;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(100, 100, 100, 0.4);
+}
+
+.notifications-container {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  height: 500px;
+  font-size: 12px;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  overflow: hidden;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+}
+.notifications-header.notification-details {
+  justify-content: flex-start;
+}
+
+.notifications-header-title {
+  font-weight: bold;
+}
+
+.notifications-header-link-right {
+  margin: 0 5px;
+  color: #365899;
+}
+.notifications-header-link-right:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.notifications-items {
+  height: 100%;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.notifications-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+  color: #B6B6B6;
+}
+
+.notifications-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: inherit;
+}
+
+/* Notification details */
+.notification-details-container {
+  background-color: white;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform: translate(-430px, 0);
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.notification-details-container.active {
+  transform: translate(0, 0);
+  background-color: white;
+}
+
+.notification-details-back-btn {
+  font-size: 18px;
+  margin-right: 8px;
+  color: #B6B6B6;
+}
+.notification-details-back-btn:hover {
+  cursor: pointer;
+  color: #727272;
+}
+
+.notification-details-content-text {
+  padding: 16px 20px;
+  white-space: normal;
+  font-size: 13px;
+  overflow: scroll;
+  height: 465px;
+}
